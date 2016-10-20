@@ -4,25 +4,30 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="node_modules/tooltipster/dist/css/tooltipster.bundle.min.css">
+  <link rel="stylesheet" href="node_modules/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css">
   <style>
     h2 {
       text-align: center;
       margin-top: 50px;
+    }
+    .tooltipster-sidetip.tooltipster-borderless.tooltipster-borderless .tooltipster-box {
+      /*tooltip styles here*/
+      padding: 8px;
     }
   </style>
 </head>
 <body>
 
   <!-- Putting a tooltip on some text (span, div or whatever): -->
-  <h2 class="tooltip" title="This is a tooltip message that is way too fucking long but hey we have to test it out.">hover over this</h2>
+  <h2 class="tooltip" title="This is a tooltip message that is way too fucking long but hey sometimes we have to do unreasonable things in order to satisfy people, and this is a perfect example of me doing precisely that.">hover over this</h2>
 
   <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="node_modules/tooltipster/dist/js/tooltipster.bundle.min.js" charset="utf-8"></script>
   <script>
-    $(document).ready(function() {
-        $('.tooltip').tooltipster({
-          maxWidth: 220,
-          theme: ['tooltipster-borderless']
+    jQuery(document).ready(function() {
+        jQuery('.tooltip').tooltipster({
+          maxWidth: 350,
+          theme: 'tooltipster-borderless'
         });
     });
   </script>
