@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/tooltipster/dist/css/tooltipster.bundle.min.css">
+  <style>
+    h2 {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Putting a tooltip on some text (span, div or whatever): -->
+  <h2 class="tooltip" title="This is a tooltip message that is way too fucking long but hey we have to test it out.">hover over this</h2>
+
+  <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+  <script src="node_modules/tooltipster/dist/js/tooltipster.bundle.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+        $('.tooltip').tooltipster({
+          maxWidth: 220,
+          theme: ['tooltipster-borderless']
+        });
+    });
+  </script>
+</body>
+</html>
